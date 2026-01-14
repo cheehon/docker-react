@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker login -u ${{ secrets.cheehon }} -p ${{ secrets.Sw0rdf!sh }}
+      - run: docker login -u ${{ secrets.cheehon }} -p ${{ secrets.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 }}
       - run: docker build -t cheehon/docker-react -f Dockerfile.dev .
       - run: docker run -e CI=true cheehon/docker-react npm test
