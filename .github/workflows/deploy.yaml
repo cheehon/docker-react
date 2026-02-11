@@ -13,6 +13,6 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.cheehon }}
-          password: ${{ secrets.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 }}
+          password: ${{ secrets.hehehaha }}
       - run: docker build -t cheehon/docker-react -f Dockerfile.dev .
       - run: docker run -e CI=true cheehon/docker-react npm test
