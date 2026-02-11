@@ -11,5 +11,6 @@ jobs:
       - name: Log in to Docker Hub
         uses: actions/checkout@v4
       - name: build image
-        run: docker build -t cheehon/docker-react -f Dockerfile.dev .
-        run: docker run -e CI=true cheehon/docker-react npm test
+        run: 
+          docker build -t cheehon/docker-react -f Dockerfile.dev .
+          docker run -e CI=true cheehon/docker-react npm test
