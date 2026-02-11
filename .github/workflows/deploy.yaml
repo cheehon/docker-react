@@ -8,9 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Log in to Docker Hub
+      - name: Checkout Code
         uses: actions/checkout@v4
       - name: build image
-        run: 
-          docker build -t cheehon/docker-react -f Dockerfile.dev .
-          docker run -e CI=true cheehon/docker-react npm test
+        run: docker build -t cheehon/docker-react -f Dockerfile.dev .
+      - name: Run Tests
+        run: docker run -e CI=true cheehon/docker-react npm test
